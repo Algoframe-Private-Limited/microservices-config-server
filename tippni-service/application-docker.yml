@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres-tweet-service:5431/tweet-service
+    url: jdbc:postgresql://postgres-tippni-service:5431/tippni-service
   data:
     redis:
       host: redis

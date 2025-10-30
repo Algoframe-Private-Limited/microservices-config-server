@@ -27,10 +27,10 @@ spring:
           predicates:
             - Path=/profile-service/api-docs/**
 
-        - id: tweet-service-docs
-          uri: lb://TWEET-SERVICE
+        - id: tippni-service-docs
+          uri: lb://tippni-SERVICE
           predicates:
-            - Path=/tweet-service/api-docs/**
+            - Path=/tippni-service/api-docs/**
 
         - id: timeline-service-docs
           uri: lb://TIMELINE-SERVICE
@@ -44,10 +44,10 @@ spring:
           filters:
             - Authentication
 
-        - id: tweet-service
-          uri: lb://TWEET-SERVICE
+        - id: tippni-service
+          uri: lb://tippni-SERVICE
           predicates:
-            - Path=/api/v1/tweet/**,/api/v1/tweets/**,/api/v1/like/**,/api/v1/retweet/**,/api/v1/retweets/**,/api/v1/reply/**,/api/v1/replies/**
+            - Path=/api/v1/tippni/**,/api/v1/tippnis/**,/api/v1/like/**,/api/v1/retippni/**,/api/v1/retippnis/**,/api/v1/reply/**,/api/v1/replies/**
           filters:
             - Authentication
 
@@ -64,8 +64,8 @@ springdoc:
   swagger-ui:
     url: http://localhost:8080/v3/api-docs
     urls:
-      - name: tweet-service
-        url: /tweet-service/api-docs
+      - name: tippni-service
+        url: /tippni-service/api-docs
 
       - name: profile-service
         url: /profile-service/api-docs

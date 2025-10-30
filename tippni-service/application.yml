@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5431/tweet-service
+    url: jdbc:postgresql://localhost:5431/tippni-service
     username: "{cipher}AQCVhCrO0bhqICVHtv15KCUN2RSO38jPGLEENa+fCQviwA+Ue9h51hvPHxBDR5FVhl3iuaU56EGOBPV7TU8l/zF7mU+B5pcZvA/1TF0ccV9yNGoqb5mPcmrwzgFhbI56g5DMtKxm6t1anuIJNICbihDvCO6E4Yk6ikkwA2QrOY/02sGKDNw8inflWuYLCyurnY7kGjk2toFkhZMBNKbAKdiVgaDbknfJ6Yi0Q0+mH7AL5sGqq+ZeJUsyxmRG3TY2gFyrq90OCTmIzoDKuyJrLCdKHgXS1wRWNz5YqYSjY0k1Bo4tWQ+KBqtSIqcgzirvuJz/FeHOGbrEz3xzFQtGw8IxI0aubF+aqJLlSxjF+fZgJCv3P8VwPQf0LoFgmVR486Y="
     password: "{cipher}AQBVEI3CP0JZxWBCNNcDR5JLB6kRX61DeTRmDFYbrd1A2MjJjgfkf1548pum3dVq0zaaPt//pRi1vXo0XLtTgapcZykIT63n3/4UScQBz5qJGTlATEcglqmQ4fZR6Tq/gFCwDqE5uM2U8Af0upx99U60nF/o/prS6HKZDWGPqavcxWIv1ohmutBysAXR5HDHSlg40dt5PupnjSu7TIpRwUwUUzIgt0jgFYtYUbUWuRtwRkdeWCVDNtI41nYrMkstL53kU5rA2zPwCumf+ayX598OVd5j1A6iKEhVuWtN6un8M5TFsFVJzZ4SDBbsDvkPu725+1iHA/SVUu+Omqh82M9P40HOpWcfFqsLRUmdTRhERaayXXCdWIvNRNW+Q9v1638="
     driver-class-name: org.postgresql.Driver
@@ -28,7 +28,7 @@ spring:
 
 springdoc:
   api-docs:
-    path: /tweet-service/api-docs
+    path: /tippni-service/api-docs
 
 eureka:
   client:
