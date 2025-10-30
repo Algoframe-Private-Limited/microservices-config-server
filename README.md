@@ -1,1 +1,1 @@
-# microservices-config-server
+Spring config server for services.

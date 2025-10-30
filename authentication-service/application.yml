@@ -1,0 +1,56 @@
+server:
+  port: 0
+
+spring:
+  application:
+    name: authentication-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/authentication-service
+    username: "{cipher}AQCVhCrO0bhqICVHtv15KCUN2RSO38jPGLEENa+fCQviwA+Ue9h51hvPHxBDR5FVhl3iuaU56EGOBPV7TU8l/zF7mU+B5pcZvA/1TF0ccV9yNGoqb5mPcmrwzgFhbI56g5DMtKxm6t1anuIJNICbihDvCO6E4Yk6ikkwA2QrOY/02sGKDNw8inflWuYLCyurnY7kGjk2toFkhZMBNKbAKdiVgaDbknfJ6Yi0Q0+mH7AL5sGqq+ZeJUsyxmRG3TY2gFyrq90OCTmIzoDKuyJrLCdKHgXS1wRWNz5YqYSjY0k1Bo4tWQ+KBqtSIqcgzirvuJz/FeHOGbrEz3xzFQtGw8IxI0aubF+aqJLlSxjF+fZgJCv3P8VwPQf0LoFgmVR486Y="
+    password: "{cipher}AQBVEI3CP0JZxWBCNNcDR5JLB6kRX61DeTRmDFYbrd1A2MjJjgfkf1548pum3dVq0zaaPt//pRi1vXo0XLtTgapcZykIT63n3/4UScQBz5qJGTlATEcglqmQ4fZR6Tq/gFCwDqE5uM2U8Af0upx99U60nF/o/prS6HKZDWGPqavcxWIv1ohmutBysAXR5HDHSlg40dt5PupnjSu7TIpRwUwUUzIgt0jgFYtYUbUWuRtwRkdeWCVDNtI41nYrMkstL53kU5rA2zPwCumf+ayX598OVd5j1A6iKEhVuWtN6un8M5TFsFVJzZ4SDBbsDvkPu725+1iHA/SVUu+Omqh82M9P40HOpWcfFqsLRUmdTRhERaayXXCdWIvNRNW+Q9v1638="
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    port: 587
+    username: "{cipher}AQCG5an+Lfp0GahPeP2UunJT0J2Oovfdxn+9ZbxL3DBb9qlMxvm1aNEYsSv5Vbmv3rvFZsfiJZz8mrRQzLEEriL+GntPi2os7dVl7yIy5FlTBc2mw7R+SCOeWAzKr8RoxCzJQt2VFgZD99PiOaK65Odcw45ik9Idb9DxUTHgzdz8iwcMEE/OpEBji3fR5oN58q2vYNPx8HGMERbNp8EZqsDGmjgG5xV+ZkBQq2VQmkfE3sIDUQC5Av5njAsifwXnqzDqNOOZCG4D91KsTdCn/nlRtf6witismTe0ftUX6olRAWRJlGVQs2RRclfOSzOYsbPSmt2SyxqOQWkZA7kBiiMuIc3QAT4NTLzXywuZM69Y4ubVQTZApvIwZvit0+sWaL79AjSbiD0JJz4VPYAlezwB"
+    password: "{cipher}AQCndWk7594woi4qVHd4q28AlPcZCmaYj9UXT1eZHDyXwzx7CP+4cK+MSGe7/+3TQ6Tp8hxPda71Y+RJL6nmA1rWKzhHwn3xliUjrBUi/RDWu1RSSCX6yQajFlVAgh5nSEE83cLoD3HodOiTGsmd64shfVcR3nbFbH0RSFBLUQmIxsPu4Icgl+XfyxKYMyXs0cHa+72S1hST0fBG05H4pBw/lgYBwIiXQYH9+4mXrYuoQ3/ulEmkrGyx+RfIIiM0AeHsJlDDgoEvc3UPAUEg2D3Ua5l4/7pCd1t35ARZNPSRSsYPCovj9WHvd0b7GAXG+yTAKtu4Py4TRFBdBGh+mvApLDmsapRWFpF8qtOKihQHDXboXG1fzw1I00Y+I2D2heo="
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls.enable: true
+          ssl.trust: smtp.gmail.com
+
+springdoc:
+  api-docs:
+    path: /authentication-service/api-docs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+services:
+  profile:
+    name: profile-service
+
+secret:
+  key: "{cipher}AQAzMA/xoQjp9N6JlLoAXLSeGyS6q5L9x1bYLNdbQycP8QPAWTfTkHKip0Jrtpy89ulZgMoUre6r75U64RnE/JfpQo52iQfXE9AIi4AniQmsAHfSWVQYIVx34wFcnkbvdo1f1e4VARM7I+v4OnGfGZfbT3BKPezH63cqzyvWdRa/ZWUwv32owf43LhxN9NuHNCbYnttYNwsfh4MbrIhyAvN97Uqg6q9FenG5OnH3DtwBcouHeO6eJhYGnlfCKLmaU6KkmfF+V2E4HmlxEReUgkNWP9pkNzogWaqjiLprXBRD5mvchreYlHS+J2ejOdY/wzk026JMIduY/ARUV00pB3yXa68AcTmntE9FgqQJQQJX4LPLPRdgralBPTtDFSg+D5g/1IFsCq92jcz65Z5xwzNr"

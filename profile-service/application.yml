@@ -1,0 +1,46 @@
+server:
+  port: 0
+
+spring:
+  data:
+    mongodb:
+      username: "{cipher}AQBVEI3CP0JZxWBCNNcDR5JLB6kRX61DeTRmDFYbrd1A2MjJjgfkf1548pum3dVq0zaaPt//pRi1vXo0XLtTgapcZykIT63n3/4UScQBz5qJGTlATEcglqmQ4fZR6Tq/gFCwDqE5uM2U8Af0upx99U60nF/o/prS6HKZDWGPqavcxWIv1ohmutBysAXR5HDHSlg40dt5PupnjSu7TIpRwUwUUzIgt0jgFYtYUbUWuRtwRkdeWCVDNtI41nYrMkstL53kU5rA2zPwCumf+ayX598OVd5j1A6iKEhVuWtN6un8M5TFsFVJzZ4SDBbsDvkPu725+1iHA/SVUu+Omqh82M9P40HOpWcfFqsLRUmdTRhERaayXXCdWIvNRNW+Q9v1638="
+      password: "{cipher}AQBVEI3CP0JZxWBCNNcDR5JLB6kRX61DeTRmDFYbrd1A2MjJjgfkf1548pum3dVq0zaaPt//pRi1vXo0XLtTgapcZykIT63n3/4UScQBz5qJGTlATEcglqmQ4fZR6Tq/gFCwDqE5uM2U8Af0upx99U60nF/o/prS6HKZDWGPqavcxWIv1ohmutBysAXR5HDHSlg40dt5PupnjSu7TIpRwUwUUzIgt0jgFYtYUbUWuRtwRkdeWCVDNtI41nYrMkstL53kU5rA2zPwCumf+ayX598OVd5j1A6iKEhVuWtN6un8M5TFsFVJzZ4SDBbsDvkPu725+1iHA/SVUu+Omqh82M9P40HOpWcfFqsLRUmdTRhERaayXXCdWIvNRNW+Q9v1638="
+      host: localhost
+      port: 27017
+      database: Profile
+      authentication-database: admin
+      auto-index-creation: true
+    redis:
+      host: localhost
+      port: 6379
+
+springdoc:
+  api-docs:
+    path: /profile-service/api-docs
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+services:
+  storage:
+    name: storage-service
