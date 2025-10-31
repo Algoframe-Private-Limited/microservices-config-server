@@ -2,6 +2,9 @@ server:
   port: 0
 
 spring:
+  cloud:
+    client:
+      hostname: authentication-service.default.svc.cluster.local
   application:
     name: authentication-service
   datasource:
@@ -36,6 +39,9 @@ springdoc:
     path: /authentication-service/api-docs
 
 eureka:
+  instance:
+    hostname: ${spring.cloud.client.hostname}
+    prefer-ip-address: false
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
