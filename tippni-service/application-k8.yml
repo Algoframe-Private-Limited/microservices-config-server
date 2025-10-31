@@ -3,10 +3,11 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5431/tippni-service
+    url: jdbc:postgresql://postgres-tippni:5432/tippni-service
   data:
     redis:
       host: redis-svc
+      port: 6379
   kafka:
     bootstrap-servers: kafka:29092
 
