@@ -17,13 +17,13 @@ cloud:
       access-key: "{cipher}AQDQ+a3K8JSqOHfdcCbG6IdigtisMYTP03djLMFUwU3jknDZCVNz0r0kWqKRESGXE+x69hy2AlgPX9blQ94Nx45r6AUoJb3Z4nRjAUOzOp77K5p8ixU0cVdlLcQp6Z4rov04j8tKbQydVluOl1xeOq+us/nwNo5GsUVZwke/OQuOyl35+1uNKtH9NlGuXDgvmyt2kLYOd8ODTfS+kPp8af13F5aY7597HDnU9YUd7WrxyQ7x9uvL43Vz6HD2H6q/pSYltt//HACT5p/TZc1B0AldNUdKwX7FYc9EPa8p6WA0q9BwDhka8AM7BB0n/Es3dTAc7OJarocdyPFynJnpaSDojSYr7BFisEWa6NksRxfW0atnhAqX4fiwN8cI+zx2NQfOCadDlgtSdkl+DMLgRn5T"
       secret-key: "{cipher}AQAqtIIzoTBf2d+dIvtQWnxoifmS6S0iNV1IBlYEfG0Dsw//bhBI8uy1nM9xFRDCIgIIeVyzKO4LkPGxb8m16F+DpK63YhT2MmxJqKaf8yXAxUxwOoDHcH7e1OmZQf2XF/l3RUXQLb0ZBml/IksLWG/+3yjI2D4yUQ4qc7JU36hHpj+uzGdROluyJshWsHBegvhaEO0aKAdzpJizZnyMNoWvz2BV1teDQ6Unsts+wlFMb0DNq8g8OcH7vCKSRMpg9jNPhm7Xvkvsht+Eo1pH1Cu9ORfxXSFAMRUOv3uhMOFy1plagpl5YL5unYPpjLEhdmhXQsA//4yWY4ol4AyvQaIt+Z874xwi2LcY02Ws8xydhiB3mLzc91liVxm+zRYBnl1/PiRrg9bRYOHUL6ghqCO8p8TdbPopdyD+SE7aQrMHiA=="
     region:
-      static: us-east-1
+      static: eu-north-1
     stack:
       auto: false
 
 application:
   bucket:
-    name: twitter-clone-storages
+    name: aws-tippni
 
 eureka:
   client:
