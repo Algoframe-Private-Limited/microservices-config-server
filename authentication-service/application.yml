@@ -2,9 +2,6 @@ server:
   port: 0
 
 spring:
-  cloud:
-    client:
-      hostname: authentication-service.default.svc.cluster.local
   application:
     name: authentication-service
   datasource:
@@ -39,11 +36,6 @@ springdoc:
     path: /authentication-service/api-docs
 
 eureka:
-  instance:
-    homePageUrl: http://authentication-service.default.svc.cluster.local:8089/
-    statusPageUrl: http://authentication-service.default.svc.cluster.local:8089/actuator/info
-    healthCheckUrl: http://authentication-service.default.svc.cluster.local:8089/actuator/health
-  client:
     service-url:
       defaultZone: http://localhost:8761/eureka
 

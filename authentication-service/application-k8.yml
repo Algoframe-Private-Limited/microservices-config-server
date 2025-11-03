@@ -14,3 +14,12 @@ management:
   zipkin:
     tracing:
       endpoint: http://zipkin:9411/api/v2/spans
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: authentication-service
+    instance-id: ${spring.application.name}:${random.value}
+    # Optional but recommended for Kubernetes
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}

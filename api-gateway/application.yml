@@ -28,7 +28,7 @@ spring:
             - Path=/profile-service/api-docs/**
 
         - id: tippni-service-docs
-          uri: lb://tippni-SERVICE
+          uri: lb://TIPPNI-SERVICE
           predicates:
             - Path=/tippni-service/api-docs/**
 
@@ -45,7 +45,7 @@ spring:
             - Authentication
 
         - id: tippni-service
-          uri: lb://tippni-SERVICE
+          uri: lb://TIPPNI-SERVICE
           predicates:
             - Path=/api/v1/tippni/**,/api/v1/tippnis/**,/api/v1/like/**,/api/v1/retippni/**,/api/v1/retippnis/**,/api/v1/reply/**,/api/v1/replies/**
           filters:
