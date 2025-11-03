@@ -20,4 +20,8 @@ eureka:
 management:
   zipkin:
     tracing:
-      endpoint: http://zipkin:9411/api/v2/spans  
+      endpoint: http://zipkin:9411/api/v2/spans
+springdoc:
+  swagger-ui:
+    server:
+      url: https://api.tippni.com
