@@ -6,16 +6,6 @@ spring:
     url: jdbc:postgresql://postgres-auth:5432/authentication-service
 
 eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery-server:8761/eureka
-
-management:
-  zipkin:
-    tracing:
-      endpoint: http://zipkin:9411/api/v2/spans
-
-eureka:
   instance:
     prefer-ip-address: false
     hostname: authentication-service
@@ -23,3 +13,11 @@ eureka:
     # Optional but recommended for Kubernetes
     metadata-map:
       instanceId: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans  
