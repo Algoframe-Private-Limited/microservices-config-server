@@ -2,6 +2,13 @@ server:
   port: 443
 
 eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: storage-service
+    instance-id: ${spring.application.name}:${random.value}
+    # Optional but recommended for Kubernetes
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}
   client:
     service-url:
       defaultZone: http://discovery-server:8761/eureka

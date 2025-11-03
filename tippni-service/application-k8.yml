@@ -12,6 +12,13 @@ spring:
     bootstrap-servers: kafka:29092
 
 eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: tippni-service
+    instance-id: ${spring.application.name}:${random.value}
+    # Optional but recommended for Kubernetes
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}
   client:
     service-url:
       defaultZone: http://discovery-server:8761/eureka
