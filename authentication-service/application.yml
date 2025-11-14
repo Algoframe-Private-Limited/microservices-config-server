@@ -59,4 +59,4 @@ secret:
 otp:
   internal-api-key: "{cipher}AQBBaI/s20hVcyuFs4tOt08+9hyW8uRUFsjnftSjfUA4rEJQ1gpSWDYoul1HYNze5M70QVw+AJgDHtQ6td7OUo/lGhUjeFuXYLuBEx4tGNksw9jJa6aQv6S02+71ahzfbmGELWNSXSqgmcSNsbyqqIiWzQpwRpq7JgnsaELpb8t3R9LcNZL02sAqyv35+sxXAS7dtL/cSBNcB95RWoiW9ux33xx2ijpY3azVYCWXsIjVD86670d9iVf/Q1mcJmvRMUYhPxNp3Z1LYGRgMN2CQdqnZAbrJDln0l6mjp1FR1wx/V7wkPdbfFb99gmb6OohFbdOtvwZiP8f3L/GiCIiF2clemSeBgrE0EC66opit3TUw5XaW90dlIFijFwNdcQ47atm6sVbWqq0KeoTx5tftvGaEhGg1Ur9SG3J5wtD9g2WTw==" 
   service:
-    base-url: OTP-SERVICE/api/v1/otp
+    base-url: otp-service
