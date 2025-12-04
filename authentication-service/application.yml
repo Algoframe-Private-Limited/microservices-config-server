@@ -52,6 +52,10 @@ services:
   profile:
     name: profile-service
 
+otp-service:
+  otp:
+    name: otp-service    
+
 # JWT SECRET - Do not modify
 secret:
   key: "{cipher}AQCAFUg4pcbUCbLqa1/Ol6XXyi8HPHyYXNMEE1dl/Se+XvCQecIuChfXP5cnITftID658KiAh26BCCV0PCuRQoL6IRDUuf5T/8XjE5uLzxgRf1R8UKDx7q8uO1qGTT2TSmp8xfT4loItQL9jcLNeF1Xl6IDZYw2rUBfuz47dt6Pp9SWfxz3MajbJKcCjQz052eimmAWzJxDDYpEKjy/3SkDDFeyN1r44eKjodpphHSe4cvs5iF9N3rzIyKvzT+4qn18QJiIwSikWRTNFRkfjPNSnVk4Pf0nhwxt7WhH5QBF2mxokfERuFlZMSUrgZDPjIxwMdRrqIFJmV3p4pkuyVibxkK1GQRdF+rLy/vq2dpRggfpQrD6gu9hirE2LISyXHQdbMe4SK0BdILT/fX5FR/LBV+bxtmh15IVfZU/37zCO/w=="
