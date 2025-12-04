@@ -44,6 +44,11 @@ spring:
           filters:
             - Authentication
 
+        - id: otp-service
+          uri: lb://OTP-SERVICE
+          predicates:
+            - Path=/api/v1/otp/**
+
         - id: tippni-service
           uri: lb://TIPPNI-SERVICE
           predicates:
