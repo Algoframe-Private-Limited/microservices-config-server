@@ -1,0 +1,69 @@
+server:
+  port: 0
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  mvc:
+    problemdetails:
+      enabled: true    
+  
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
+
+otp:
+  mode: authkey                   # authkey | sandbox
+  expiry-seconds: 300
+  resend-window-seconds: 30
+  per-mobile-minute-limit: 3
+  routing:
+    default-provider: authkeyProvider        #authkeyProvider
+    default-fallbacks: [ ]
+    rules:
+      - countryCodes: [ "91" ]
+        channels: [ "sms" ]
+        provider: authkeyProvider
+        fallbacks: [ "sandboxProvider" ]
+    provider-overrides:
+      authkey:
+        sid-overrides:
+          "91": "28763"
+
+jwt:
+  issuer: algomeet-otp-service
+  proof-ttl-seconds: 120
+  secret: ${OTP_PROOF_SECRET:please-change-me-32-bytes-minimum}  
+
+authkey:
+  base-url: https://api.authkey.io
+  verify-url: https://authkey.io/api
+  key: ${AUTHKEY_KEY:""}
+  sid: ${AUTHKEY_SID:""}
+  default-country: "91"
+
+security:
+  internal-api-key: ${INTERNAL_API_KEY:dev-internal-key}
+  accept-internal-api-key: true
+  accept-jwt: true
+
+sandbox:
+  fixed-code: "123456"
+  logid-prefix: "SANDBOX-"
+  expose-otp-in-response: true
+
+services:
+  otp:
+    name: otp-service

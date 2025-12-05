@@ -1,0 +1,27 @@
+server:
+  port: 8096
+
+spring:
+  data:
+    redis:
+      host: redis-svc
+      port: 6379
+  kafka:
+    bootstrap-servers: kafka-0.kafka.default.svc.cluster.local:29092
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    hostname: otp-service
+    instance-id: ${spring.application.name}:${random.value}
+    # Optional but recommended for Kubernetes
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}
+  client:
+    service-url:
+      defaultZone: http://discovery-server:8761/eureka
+
+management:
+  zipkin:
+    tracing:
+      endpoint: http://zipkin:9411/api/v2/spans
