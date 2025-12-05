@@ -29,6 +29,10 @@ otp:
   expiry-seconds: 300
   resend-window-seconds: 30
   per-mobile-minute-limit: 3
+  log:
+    http-filter: true
+    provider-http: true   # flip to true to see provider DEBUG lines
+    mask-pii: true
   routing:
     default-provider: authkeyProvider        #authkeyProvider
     default-fallbacks: [ ]
@@ -67,3 +71,4 @@ sandbox:
 services:
   otp:
     name: otp-service
+
