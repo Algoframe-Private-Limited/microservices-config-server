@@ -40,7 +40,7 @@ otp:
       - countryCodes: [ "91" ]
         channels: [ "sms" ]
         provider: authkeyProvider
-        fallbacks: [ "sandboxProvider" ]
+        #fallbacks: [ "sandboxProvider" ]
     provider-overrides:
       authkey:
         sid-overrides:
@@ -63,12 +63,13 @@ security:
   accept-internal-api-key: true
   accept-jwt: true
 
-sandbox:
-  fixed-code: "123456"
-  logid-prefix: "SANDBOX-"
-  expose-otp-in-response: true
+# sandbox:
+#   fixed-code: "123456"
+#   logid-prefix: "SANDBOX-"
+#   expose-otp-in-response: true
 
 services:
   otp:
     name: otp-service
+
 
